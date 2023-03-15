@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="scores.html">View Highscores</a></li>
+                <li><span id="timer">Time: <span id="remaining-time">0</span></span></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Quiz section -->
+    <main>
+        <!-- Intro screen -->
+        <section id="start-section" class="quiz-section">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="start-btn">Start Quiz</button>
+        </section>
+        <!-- Quizzes -->
+        <section id="quizzes" class="quiz-section hide">
+            <h2 id="question"></h2>
+            <ul id="answers"></ul>
+        </section>
+        <!-- End screen -->
+        <section id="end-section" class="quiz-section hide">
+            <h2 id="ending-title">All done!</h2>
+            <p id="score-text">Your final score is <span id="final-score"></span>.</p>
+            <form id="score-form">
+                <label for="initials">Enter initials: </label>
+                <input type="text" id="initials" name="initials" placeholder="ABC">
+                <button type="submit">Submit</button>
+                <!-- In case of any error -->
+                <p id="error-message"></p>
+            </form>
+            <a href="index.html" class="back-btn">Back to quiz</a>
+        </section>
+        <!-- Show disappearing correct or wrong status -->
+        <div>
+            <em id="correct-answer" class="answer-status hide">Correct!</em>
+            <em id="wrong-answer" class="answer-status hide">Wrong!</p>
+        </div>
+    </main>
+    <!-- JavaScript section -->
+    <script src="script.js"></script>
+</body>
+</html>
